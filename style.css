@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+
+:root{
+    --alta: 'Alata', sans-serif;
+    --josefin: 'Josefin Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    font-family: var(--alta)
+}
+
+.mobile {
+    display: none;
+}
+
+.desktop {
+    display: block;
+}
+
+.line {
+    height: 2px;
+    width: 100%;
+    margin-top: 0.4rem;
+    border-radius: 5px;
+    background: white;
+    transform: scale(0);
+    transform-origin: center;
+    transition: transform 0.5s;
+}
+
+.links:hover .line {
+    transform: scale(1);
+    transform-origin: center;
+}
+
+/* _________MOBILE MENU______ */
+
+.menu {
+    height: 100%;
+    width: 0;
+    background: black;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    padding: 0;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.menuTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.menuClose{
+    display: none;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    transform: translateX(100px);
+    filter: blur(0);
+    cursor: pointer;
+    animation: menuCloseAnim 0.6 1.4s forwards;
+}
+
+.menuList{
+    position: relative;
+    top: 25%;
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    font-family: var(--josefin);
+}
+
+.menuLinks {
+    color: white;
+    font-size: 3em;
+    margin: 1rem 0;
+}
+
+.menuList :nth-child(1){
+    transform: translateX(-200px);
+    filter: blur(0);
+    animation-name: menuListAnim;
+    animation-duration: 0.6s;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+}
+
+.menuList :nth-child(2){
+    transform: translateX(-200px);
+    filter: blur(0);
+    animation-name: menuListAnim;
+    animation-duration: 0.6s;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+}
+.menuList :nth-child(3){
+    transform: translateX(-200px);
+    filter: blur(0);
+    animation-name: menuListAnim;
+    animation-duration: 0.6s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+.menuList :nth-child(4){
+    transform: translateX(-200px);
+    filter: blur(0);
+    animation-name: menuListAnim;
+    animation-duration: 0.6s;
+    animation-delay: 0.7s;
+    animation-fill-mode: forwards;
+}
+.menuList :nth-child(5){
+    transform: translateX(-200px);
+    filter: blur(0);
+    animation-name: menuListAnim;
+    animation-duration: 0.6s;
+    animation-delay: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+
+/* _______TOP___________ */
+
+.top {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: 4rem 10rem;
+}
+
+.top>picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.top>picture>img {
+    width: 100vw;
+    filter: brightness(0.8);
+}
+
+.navBar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 40%;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.links {
+    color: white;
+    font-size: large;
+    cursor: pointer;
+}
+
+.menuBtn {
+    display: none;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.topTextBox {
+    border: 2px solid white;
+    color: white;
+    width: 55%;
+    font-size: 5em;
+    padding: 2rem;
+    position: relative;
+    margin: 7rem 0;
+    font-family: var(--josefin);
+}
+
+
+/* ____________MIDDLE___________ */
+
+.middle {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: 4rem 10rem;
+}
+
+.info {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.infoBox {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    background: white;
+    padding: 3rem 4rem;
+    text-align: left;
+}
+
+.infoBox>p {
+    color: gray;
+}
+
+.head {
+    font-size: 4em;
+    margin: 1rem 0;
+    font-family: var(--josefin);
+}
+
+.more {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 8rem 0 5rem 0;
+    font-family: var(--josefin);
+}
+
+.more>p {
+    font-size: 3em;
+}
+
+.moreBtn {
+    border: 1px solid black;
+    outline: 0;
+    background: white;
+    padding: 0.5rem 2rem;
+    font-family: var(--alta);
+    font-size: 1em;
+    letter-spacing: 3px;
+    transition: background, color 0.3s;
+}
+
+.moreBtn:hover {
+    background: black;
+    color: white;
+}
+
+.imageGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.imageGallery>picture {
+    position: relative;
+    margin-bottom: 4rem;
+    cursor: pointer;
+}
+
+.imageGallery>picture:hover img {
+    filter: opacity(0.4);
+}
+
+.imageGallery>picture:hover .imageText {
+    color: black;
+}
+
+
+.imageText {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    font-size: 2.5em;
+    text-align: left;
+    padding: 1.8rem;
+    font-family: var(--josefin);
+}
+
+
+
+/* __________BOTTOM_____________ */
+
+.bottom {
+    width: 100%;
+    display: grid;
+    grid-template-areas: 'logo contact'
+        'list para';
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 5rem 5rem;
+    padding: 3rem 10rem;
+    background-color: black;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.contact{
+    grid-area: contact;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.bottom>p {
+    grid-area: para;
+    color: gray;
+    text-align: end;
+}
+
+.listBottom {
+    grid-area: list;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 80%;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.contact>div {
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.contact>div:hover .line {
+    transform: scale(1);
+    transform-origin: center;
+}
+
+.lower>p {
+    font-size: medium;
+    color: hsl(0, 0%, 55%);
+}
+
+
+/*________________MEDIA QUERIES__________  */
+
+@media (max-width: 1440px) {
+    body {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 420px) {
+
+    body {
+        font-size: 9px;
+    }
+
+    img {
+        width: 88vw;
+    }
+
+    .mobile{
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .top,
+    .middle,
+    .bottom {
+        padding: 2rem 1.5rem;
+        overflow: hidden;
+    }
+
+    .list {
+        display: none;
+    }
+
+    .menuBtn {
+        display: block;
+    }
+
+    .topTextBox {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .infoBox {
+        position: relative;
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+        font-size: 1em;
+    }
+
+    .infoBox>p {
+        font-size: medium;
+    }
+
+    .more {
+        justify-content: center;
+        margin: 3rem 0;
+    }
+
+    .imageGallery{
+        justify-content: center;
+    }
+
+    .imageGallery>picture {
+        margin-bottom: 2rem;
+    }
+
+    .imageText {
+	text-align: left;
+       padding: 1rem;
+       width: 45%;
+    }
+
+    .bottom {
+        grid-template-areas: 'logo'
+        'list'
+        'contact'
+        'para';
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .listBottom {
+        flex-direction: column;
+        align-items: center;
+        margin: 2rem 0;
+    }
+
+    .listBottom>li {
+        margin: 0.5rem 0;
+        font-size: medium;
+    }
+
+    .bottom>p {
+        font-size: medium;
+        text-align: center;
+    }
+
+    .contact {
+        justify-content: center;
+        margin: 1rem 0;
+    }
+
+}
+
+
+@keyframes menuListAnim {
+    0% {
+        transform: translateX(-200px);
+        filter: blur(0);
+    }
+
+    100% {
+        transform: translateX(0);
+        filter: blur(1);
+    }
+}
+
+@keyframes menuCloseAnim {
+    0% {
+        transform: translateX(100px);
+        filter: blur(0);
+    }
+
+    100% {
+        transform: translateX(-20px);
+        filter: blur(1);
+    }
+}
